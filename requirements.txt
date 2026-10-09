@@ -1,0 +1,2 @@
+# RestoraX is not on PyPI yet; install the engine straight from GitHub.
+restorax @ git+https://github.com/karailker/restorax.git@main

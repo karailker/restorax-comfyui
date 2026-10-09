@@ -1,0 +1,33 @@
+[project]
+name = "restorax-comfyui"
+description = "ComfyUI custom nodes for RestoraX: AI video restoration (super-resolution, face restoration, colorization, frame interpolation, deinterlacing, HDR, stabilization, audio) and an optional external DLSS 5 enhancer."
+version = "0.1.0"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "restorax @ git+https://github.com/karailker/restorax.git@main",
+]
+
+[project.urls]
+Repository = "https://github.com/karailker/restorax-comfyui"
+Documentation = "https://github.com/karailker/restorax"
+"Bug Tracker" = "https://github.com/karailker/restorax-comfyui/issues"
+
+[tool.comfy]
+# Fill in before the first publish: create a publisher at https://registry.comfy.org
+# and put its ID here (the part after the @ in your publisher URL).
+PublisherId = ""
+DisplayName = "RestoraX"
+Icon = ""
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E402"]
